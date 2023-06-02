@@ -1,0 +1,35 @@
+using System;
+
+namespace Assignments
+{
+    class Assignment1_1
+    {
+        static void Main(string[] args)
+        {
+            int daughter = 5;
+            int totalmango = 0;
+            int mango = (daughter * 2);
+
+            for(int i = 0; i<daughter; i++)
+            {
+            int mango1 = mango / 2;
+
+                totalmango = mango + mango1 + 1; 
+                
+                mango = totalmango;
+               
+            }
+                         
+                Console.WriteLine(totalmango);  
+
+        }
+       
+    }
+
+}
+
+
+
+
+   
+
