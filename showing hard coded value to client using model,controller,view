@@ -22,6 +22,18 @@ namespace project1.Models
     }
 }
 oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+The provided code is a C# class named "Employee" within the "project1.Models" namespace. It represents an employee
+entity and has the following properties:
+
+- `EmployeeId`: An integer property representing the unique identifier of an employee.
+- `Name`: A string property representing the name of an employee.
+- `Gender`: A string property representing the gender of an employee.
+- `City`: A string property representing the city where an employee resides.
+
+This class can be used to define and manipulate employee objects within an application. It seems to be intended 
+for use in a web application since it imports the `System.Web.Mvc` namespace. The code snippet itself does not 
+contain any methods or additional functionality apart from the property declarations.
+oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 then create a conrtoller of that class 
 write a Detail method to get the data 
 instantiate the model class here
@@ -51,6 +63,19 @@ namespace project1.Controllers
         }
     }
 }
+oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+The provided code is a C# class named "EmployeeController" within the "project1.Controllers" namespace. It is a controller class 
+that inherits from the `Controller` class provided by ASP.NET MVC.
+
+The `EmployeeController` class has a single action method called `Details`. This action method is responsible for retrieving
+details of an employee and passing the employee object to a corresponding view.
+
+Within the `Details` action method, a new instance of the `Employee` class is created and initialized with some sample data.
+The employee object has an `EmployeeId` of 101, a `Name` of "John", a `Gender` of "male", and a `City` of "London".
+
+Finally, the action method returns a `View` result, passing the employee object as a parameter. This implies that there
+should be a corresponding view named "Details.cshtml" associated with this action method, which will be responsible for 
+rendering the employee details.
 oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 Then create a view for that controller by right clicking on the Details method
 then add cshtml code
@@ -100,7 +125,27 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
     
 </table>
+oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+The provided code is a Razor view file named "Details.cshtml" associated with the `Details` action method in the `EmployeeController`. 
+This view is responsible for rendering the details of an employee.
 
+The code starts with setting the `ViewBag.Title` property to "Details" to specify the title of the view.
+
+The view then displays an HTML heading `<h2>Employee Details</h2>` to indicate that it's rendering the details of an employee.
+
+Following that, a table is defined with inline styling to set the font family to Arial.
+
+Inside the table, there are four table rows (`<tr>`) representing the employee details:
+
+1. Employee Id: It displays the label "Employee Id :" in one `<td>` cell, and the value of `@Model.EmployeeId` (the employee's id)
+in another `<td>` cell.
+2. Name: It displays the label "Name :" in one `<td>` cell, and the value of `@Model.Name` (the employee's name) in another `<td>` cell.
+3. Gender: It displays the label "Gender :" in one `<td>` cell, and the value of `@Model.Gender` (the employee's gender) in another `<td>` cell.
+4. City: It displays the label "City:" in one `<td>` cell, and the value of `@Model.City` (the employee's city) in another `<td>` cell.
+
+The table structure allows for a neat display of the employee details.
+
+Overall, this view will present the employee details in a tabular format with labels and corresponding values.
 oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 then run the program on the IIS , it will show data
 
